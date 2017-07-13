@@ -17,9 +17,6 @@ function jeu (){
 
 
 
-
-
-
   function random(images);
 }
 
