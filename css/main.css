@@ -21,12 +21,16 @@ h1 {
 }
 
 
+
 .front figure {
   position: absolute;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  width: 100%;
+  height: auto;
+  display: none;
 }
 
 .back figure {
@@ -35,6 +39,8 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  width: 100%;
+  height: auto;
   /*display: none;*/
 }
 
@@ -44,7 +50,6 @@ img {
   width: auto;
   margin: 20px;
   border-radius: 100%;
-  widows: 100%;
 }
 
 
