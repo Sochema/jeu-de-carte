@@ -28,36 +28,33 @@ h1 {
   z-index: 2;
 }
 
-.front figure {
+.imagesBack {
   position: absolute;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
-  height: auto;
-  /*z-index: 2;*/
 }
 
-.back figure {
-  position: relative;
+.imagesfront {
+  position: absolute;
+}
+
+.imgs {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  width: 100%;
+}
+
+figure {
+  position:relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: auto;
   /*display: none;*/
   /*z-index: 1;*/
 }
 
 
-
 img {
-  display: inline-flex;
-  flex-wrap: wrap;
   width: auto;
-  margin: 20px;
   border-radius: 100%;
 }
 

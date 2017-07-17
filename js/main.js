@@ -12,9 +12,9 @@ console.log(front);
 //
 // }
 
-//function random random(images);
+//function random random(images); FAIT
 
-//function onclick
+//function onclick FAIT
 
 
 //function reste visible quand bon
@@ -31,7 +31,12 @@ console.log(front);
 
 
 
-
+// if (imagesBack[i].src == imagesBack){
+//
+//
+// } else {
+//   images[i].classList.toggle("front");
+// }
 
 
 
@@ -54,6 +59,7 @@ for (let i = 0; i < images.length; i++) {
 
 function turn(index){
   images[index].classList.toggle("front");
+  images[index].style.display = "none";
   //imagesBack[index].classList.add("front");
 
 }
