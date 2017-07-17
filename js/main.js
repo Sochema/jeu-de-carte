@@ -33,60 +33,41 @@ console.log(front);
 
 
 
-// function return(){
-//   imagePlace.style.transform = "rotate(20deg)";
-// }
+
 
 
 
 //EVENEMENT CLICK
-for (var i = 0; i < imagesBack.length; i++) {
-    imagesBack[i].addEventListener('click', function() {
-        turn(this);
-    });
+for (let i = 0; i < images.length; i++) {
+    images[i].addEventListener('click', function () {
+      turn(i);
+  });
 }
 
 
-// for (var i = 0; i < images.length; i++) {
-//   images[i].addEventListener('click', function(){
-//     retourne(this);
-//   })
-// }
 
-// POUR RETOURNER IMAGES1 SUR IMAGES2
-function turn(imagesBack) {
-    var id = setInterval(reverse, 10);
-    var width = 0;
 
-    function reverse(){
-        if (width === 120){
-            clearInterval(id);
-            images.style.display = "none";
-            imagesBack.style.display = "block";
-    } else {
-        width++;
-        imagesBack.style.left = width + 'px';
-    }
-  }
+
+
+
+//POUR RETOURNER LES IMAGES AVEC ONCLICK
+
+function turn(index){
+  images[index].classList.toggle("front");
+  //imagesBack[index].classList.add("front");
+
 }
 
-//
-// cancelAnimationFrame(turn);
-//
-// function retourne(images) {
-//     var id = setInterval(reverse, 10);
-//     var width = 120;
-//
-//     function reverse(){
-//         if (width === 0){
-//             clearInterval(id);
-//             images.style.display = "block";
-//     } else {
-//         width++;
-//         images.style.width = width + 'px';
-//     }
-//   }
-// }
+
+
+//si c'est pas la bonne source on rajoute la classe donc toggle pour refaire apparaitre l'image de derrière
+
+
+
+
+
+
+
 
 
 
