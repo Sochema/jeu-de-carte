@@ -9,7 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,100 +27,105 @@
 
     <h1>TROUVEZ</h1>
 
-<div class= "imgs">
-    <figure>
-        <img class="imagesBack back" src="img/aaron.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+    <div id="btn">
+        <button id="play" onclick="play()" type="button" class="btn btn-primary btn-lg">PLAY</button>
+        <button id="playagain" onclick="random()" type="button" class="btn btn-primary btn-lg">PLAY AGAIN</button>
+    </div>
 
-    <figure>
-        <img class="imagesBack back" src="img/aaron.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+    <div class="imgs">
+        <figure>
+            <img class="imagesBack back" src="img/aaron.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/timothee.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/aaron.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/timothee.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/timothee.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/matthieud.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/timothee.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/matthieud.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/matthieud.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/anass.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/matthieud.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-
-    <figure>
-      <img class="imagesBack back" src="img/anass.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
-
-    <figure>
-        <img class="imagesBack back" src="img/christophe.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
-
-    <figure>
-        <img class="imagesBack back" src="img/christophe.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/anass.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
 
-    <figure>
-        <img class="imagesBack back" src="img/madjid.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/anass.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/madjid.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/christophe.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/thomas.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/christophe.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/thomas.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/leila.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/madjid.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/leila.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/madjid.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/thierry.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/thomas.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-    <figure>
-        <img class="imagesBack back" src="img/thierry.png" alt="">
-        <img class="imagesFront front" src="img/adep.png" alt="">
-    </figure>
+        <figure>
+            <img class="imagesBack back" src="img/thomas.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
 
-</div>
+        <figure>
+            <img class="imagesBack back" src="img/leila.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
+
+        <figure>
+            <img class="imagesBack back" src="img/leila.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
+
+        <figure>
+            <img class="imagesBack back" src="img/thierry.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
+
+        <figure>
+            <img class="imagesBack back" src="img/thierry.png" alt="">
+            <img class="imagesFront front" src="img/adep.png" alt="">
+        </figure>
+
+    </div>
 
 
 

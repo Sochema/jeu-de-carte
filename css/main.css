@@ -42,6 +42,22 @@ h1 {
   justify-content: center;
 }
 
+#btn{
+  display:flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+#play {
+  margin-right: 5%;
+  display: block;
+}
+
+#playagain{
+    margin-left: 5%;
+    display: none;
+}
+
 figure {
   position:relative;
   display: inline-flex;

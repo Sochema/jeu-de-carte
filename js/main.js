@@ -4,64 +4,68 @@ var images = document.getElementsByClassName("imagesFront");
 var imagesBack = document.getElementsByClassName("imagesBack");
 var imagePlace = document.getElementsByTagName("img");
 var hasard = imagesBack[Math.floor(Math.random() * imagesBack.length)];
+var source = "";
 
-console.log(front);
-
-// function jeu (el){
-//   turn(back);
-//
-// }
-
-//function random random(images); FAIT
-
-//function onclick FAIT
+var play = document.getElementById("play");
+var replay = document.getElementById("playagain");
 
 
 //function reste visible quand bon
 
 //function rafraichir avec button
 
+function play(){
+  imagesBack[i] = hasard;
+  play.style.display = "block";
+  replay.style.display = "none";
+  jeu.style.visibility = "visible";
+}
 
-// function random(){
-//   for (var i = 0; i <hasard.length; i++) {
-//     hasard[i].innerHTML = imagePlace;
-//   }
-// }
+  function random(){
+    imagesBack[i] = hasard;
+  }
 
-
-
-
-// if (imagesBack[i].src == imagesBack){
-//
-//
-// } else {
-//   images[i].classList.toggle("front");
-// }
-
-
-
+for (var i = 0; i < imagesBack.length; i++) {
+  imagesBack[i].addEventListener("click", function(){
+    hasard;
+  })
+}
 
 
 //EVENEMENT CLICK
 for (let i = 0; i < images.length; i++) {
-    images[i].addEventListener('click', function () {
-      turn(i);
-  });
+    images[i].addEventListener('click', function() {
+        turn(i);
+    });
 }
 
 
+function paire(index) {
+  console.log(source);
+    if (source == "") {
+        source = imagesBack[index];
+    } else {
+        if (source.src == imagesBack[index].src) {
 
-
+        } else {
+          setTimeout(function() {
+              images[index].classList.toggle("back");
+              source.style.zIndex = "2";
+              images[index].style.visibility = "visible";
+            }, 500);
+        }
+        source = "";
+    }
+}
 
 
 
 //POUR RETOURNER LES IMAGES AVEC ONCLICK
 
-function turn(index){
-  images[index].classList.toggle("front");
-  images[index].style.display = "none";
-  //imagesBack[index].classList.add("front");
-
+function turn(index) {
+    images[index].classList.toggle("front");
+    images[index].style.visibility = "hidden";
+    paire(index);
 }
 
 
@@ -76,14 +80,4 @@ function turn(index){
 
 
 
-
-
-
-
-
-
-
-
-
-
-    //Appeler la fonction
+//Appeler la fonction
