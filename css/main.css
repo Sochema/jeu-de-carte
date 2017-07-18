@@ -36,7 +36,8 @@ h1 {
   position: absolute;
 }
 
-.imgs {
+#imgs {
+  visibility: hidden;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,6 +71,7 @@ figure {
 
 
 img {
+
   width: auto;
   border-radius: 100%;
 }

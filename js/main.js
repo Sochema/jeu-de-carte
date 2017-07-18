@@ -3,33 +3,33 @@ var back = document.getElementsByClassName("back");
 var images = document.getElementsByClassName("imagesFront");
 var imagesBack = document.getElementsByClassName("imagesBack");
 var imagePlace = document.getElementsByTagName("img");
-var hasard = imagesBack[Math.floor(Math.random() * imagesBack.length)];
-var source = "";
-
-var play = document.getElementById("play");
+var source = ["img/aaron.png", "img/aaron.png", "img/timothee.png", "img/timothee.png", "img/christophe.png", "img/matthieud.png", "img/anass.png", "img/anass.png", "img/thomas.png", "img/thomas.png", "img/leila.png", "img/leila.png", "img/thierry.png", "img/thierry.png"];
+var hasard = Math.floor(Math.random() * source.length);
+var dive = document.getElementById('imgs');
 var replay = document.getElementById("playagain");
-
 
 //function reste visible quand bon
 
 //function rafraichir avec button
 
-function play(){
-  imagesBack[i] = hasard;
-  play.style.display = "block";
-  replay.style.display = "none";
-  jeu.style.visibility = "visible";
+function pl(){
+  dive.style.visibility = "visible";
+  replay.style.visibility = "hidden";
 }
 
-  function random(){
-    imagesBack[i] = hasard;
-  }
 
-for (var i = 0; i < imagesBack.length; i++) {
-  imagesBack[i].addEventListener("click", function(){
-    hasard;
-  })
+
+//Pour le random
+function random(){
+for (var j = 0; j < source.length; j++) {
+  var index = 0;
+  index = source[j];
+  hasard;
+  source[j] = source[hasard];
+  source[hasard] = index;
 }
+}
+
 
 
 //EVENEMENT CLICK
@@ -40,23 +40,24 @@ for (let i = 0; i < images.length; i++) {
 }
 
 
-function paire(index) {
-  console.log(source);
-    if (source == "") {
-        source = imagesBack[index];
-    } else {
-        if (source.src == imagesBack[index].src) {
-
-        } else {
-          setTimeout(function() {
-              images[index].classList.toggle("back");
-              source.style.zIndex = "2";
-              images[index].style.visibility = "visible";
-            }, 500);
-        }
-        source = "";
-    }
-}
+// function paire(index) {
+//   console.log(source);
+//    for (var y = 0; y < source.length; y++) {
+//      source[i] =
+//    }
+//         if (source[i] == imagesBack[index].src) {
+//
+//         } else {
+//
+//           setTimeout(function() {
+//               images[index].classList.toggle("back");
+//               source.classList.toggle("back");
+//               images[index].style.visibility = "visible";
+//             }, 500);
+//         }
+//         source = "";
+//     }
+// }
 
 
 
@@ -65,7 +66,7 @@ function paire(index) {
 function turn(index) {
     images[index].classList.toggle("front");
     images[index].style.visibility = "hidden";
-    paire(index);
+    // paire(index);
 }
 
 
