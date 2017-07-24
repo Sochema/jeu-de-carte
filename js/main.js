@@ -1,28 +1,27 @@
-var front = document.getElementsByClassName("front");
-var back = document.getElementsByClassName("back");
-var images = document.getElementsByClassName("imagesFront");
+var figure = document.getElementsByTagName("figure");
 var imagesBack = document.getElementsByClassName("imagesBack");
-var imagePlace = document.getElementsByTagName("img");
 var source = ["img/aaron.png", "img/aaron.png", "img/timothee.png", "img/timothee.png", "img/christophe.png", "img/christophe.png", "img/matthieud.png", "img/matthieud.png", "img/anass.png", "img/anass.png", "img/thomas.png", "img/thomas.png", "img/leila.png", "img/leila.png", "img/thierry.png", "img/thierry.png"];
 var hasard = Math.floor(Math.random() * source.length);
 var dive = document.getElementById('imgs');
-var replay = document.getElementById("playagain");
-
-//function reste visible quand bon
-
-//function rafraichir avec button
-
+var play = document.getElementById("play");
+var tab = [];
+var clicksource = [];
+var index = 0;
 
 
+
+// FUNCTION SUR BOUTON
 function pl() {
     dive.style.visibility = "visible";
-    replay.style.display = "block";
-    play.style.display = "none";
+    play.innerHTML = "Play Again";
+    for (var i = 0; i < figure.length; i++) {
+        figure[i].getElementsByTagName('img')[1].style.visibility = "visible";
+    }
     random();
 }
 
 
-//Pour le random
+//RANDOM SUR IMAGESBACK
 function random() {
     for (var j = 0; j < source.length; j++) {
         var index;
@@ -33,62 +32,62 @@ function random() {
     }
     for (var i = 0; i < source.length; i++) {
         imagesBack[i].src = source[i];
-        console.log(imagesBack[i].src);
     }
-
+    clickJoueur();
 }
-
-
 
 
 //EVENEMENT CLICK
-for (let i = 0; i < images.length; i++) {
-    images[i].addEventListener('click', function() {
-        turn(i);
-    });
+function clickJoueur() {
+    for (let i = 0; i < figure.length; i++) {
+        figure[i].addEventListener('click', pushOntab);
+    }
+}
+
+function pushOntab() {
+    tab.push(this);
+    tab[index].getElementsByTagName('img')[1].style.visibility = "hidden";
+    clicksource.push(tab[index].getElementsByTagName('img')[0].src);
+    index++;
+    //  console.log(clicksource);
+    if (index == 2) {
+        compare();
+    }
+    // while(clicksource.length <= 2){
+    // tab.push(this);
+    //  tab[index].getElementsByTagName('img')[1].style.visibility = "hidden";
+    //  clicksource.push(tab[index].getElementsByTagName('img')[0].src);
+    //  index++;
+    //   console.log(clicksource);
+    // }
+    //  compare();
+
+}
+
+function stop() {
+    for (var i = 0; i < figure.length; i++) {
+        figure[i].removeEventListener("click", pushOntab);
+    }
 }
 
 
-//IMAGE SE RETOURNE
-
-function paire(index) {
-    console.log(source);
-    for (var y = 0; y < source.length; y++) {
-        source[y] = random();
-    }
-    if (source[y] == imagesBack[index]) {
-
-    } else {
+//COMPARE LES SOURCES DES IMAGES
+function compare() {
+    stop();
+    if (clicksource[0] != clicksource[1]) {
         setTimeout(function() {
-            images[index].classList.toggle("back");
-            source.classList.toggle("back");
-            images[index].style.visibility = "visible";
-        }, 500);
+
+            tab[0].getElementsByTagName('img')[1].style.visibility = "visible";
+            tab[1].getElementsByTagName('img')[1].style.visibility = "visible";
+            clicksource = [];
+            tab = [];
+            index = 0;
+            clickJoueur();
+        }, 800);
+    } else {
+        clicksource = [];
+        tab = [];
+        index = 0;
+        clickJoueur();
     }
-    source = "";
 }
-
-
-
-
-//POUR RETOURNER LES IMAGES AVEC ONCLICK
-
-function turn(index) {
-    //  images[index].classList.toggle("front");
-    images[index].style.visibility = "hidden";
-
-}
-
-
-
-//si c'est pas la bonne source on rajoute la classe donc toggle pour refaire apparaitre l'image de derrière
-
-
-
-
-
-
-
-
-
-//Appeler la fonction

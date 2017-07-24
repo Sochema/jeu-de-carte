@@ -50,14 +50,13 @@ h1 {
 }
 
 #play {
-  margin-right: 5%;
   display: block;
 }
 
-#playagain{
+/*#playagain{
     margin-left: 5%;
     display: none;
-}
+}*/
 
 figure {
   position:relative;
