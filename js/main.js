@@ -4,7 +4,7 @@ var source = ["img/aaron.png", "img/aaron.png", "img/timothee.png", "img/timothe
 var hasard = Math.floor(Math.random() * source.length);
 var dive = document.getElementById('imgs');
 var play = document.getElementById("play");
-var cry= document.querySelector("#cry");
+var si= document.querySelector("#si");
 var damn = document.querySelector("#damn");
 var tab = [];
 var clicksource = [];
@@ -78,8 +78,7 @@ function compare() {
     stop();
     if (clicksource[0] != clicksource[1]) {
         setTimeout(function() {
-          cry.play();
-          damn.pause();
+          damn.play();
             tab[0].getElementsByTagName('img')[1].style.visibility = "visible";
             tab[1].getElementsByTagName('img')[1].style.visibility = "visible";
             clicksource = [];
@@ -88,8 +87,7 @@ function compare() {
             clickJoueur();
         }, 800);
     } else {
-        cry.pause();
-        damn.play();
+        si.play();
         clicksource = [];
         tab = [];
         index = 0;
